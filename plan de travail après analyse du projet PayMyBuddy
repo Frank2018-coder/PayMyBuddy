@@ -1,0 +1,91 @@
+plan de travail après analyse du projet PayMyBuddy
+
+
+0. Pré-requis
+• Java 17 (ou 21)
+• IntelliJ IDEA
+• Maven
+• Git
+• MySQL ou PostgreSQL
+
+
+1. Initialisation du projet
+• Création du repository Git
+• Ajout du .gitignore Java
+• Création du dossier sql/ pour les scripts BDD
+
+
+2. Conception du MPD
+• Tables principales : users, connections, transactions
+• Email unique pour l’authentification
+• Gestion d’un solde utilisateur (prototype)
+
+
+3. Scripts SQL
+• schema.sql : création des tables et contraintes
+• data.sql : données de démonstration
+• Tests des scripts dans la base locale
+
+
+4. Création du projet Spring Boot
+• Spring Web
+• Spring Data JPA
+• Spring Security
+• Thymeleaf
+• Driver BDD
+• Validation
+
+
+5. Configuration de la base de données
+• Variables d’environnement pour les identifiants
+• Configuration sécurisée dans application.properties
+
+
+6. Entités JPA
+• UserEntity
+• ConnectionEntity
+• TransactionEntity
+• Mapping conforme au MPD
+
+
+7. Couche DAL / Repository
+• UserRepository
+• ConnectionRepository
+• TransactionRepository
+
+
+8. Services métier
+• AuthService : inscription et connexion
+• ConnectionService : gestion des relations
+• TransferService : transferts transactionnels avec rollback
+
+
+9. Logging
+• Log4j2
+• INFO : appels utilisateurs
+• DEBUG : calculs métiers
+• ERROR : exceptions
+
+
+10. Interface Web
+• Pages : login, register, transfer, connection, profile
+• Thymeleaf + Bootstrap
+• Respect des règles WCAG
+
+
+11. Sécurité
+• Spring Security
+• Pages protégées
+• Hash des mots de passe avec BCrypt
+
+
+12. Tests
+• Tests unitaires services
+• Tests web avec MockMvc
+
+
+13. Livraison
+• README complet
+• MPD documenté
+• Scripts SQL versionnés
+• Application lançable
